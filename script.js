@@ -42,3 +42,29 @@ document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
     status.textContent = 'Mulțumim — mesajul tău este pregătit pentru noi.';
     event.currentTarget.reset();
 });
+
+const visitCount = document.querySelector('[data-visit-count]');
+
+const updateDailyVisitCount = async () => {
+    if (!visitCount || typeof Counter === 'undefined') return;
+
+    const today = new Date().toISOString().slice(0, 10);
+    const counterName = `visits-${today}`;
+    const storageKey = `gemariaica-counted-${today}`;
+    const alreadyCounted = window.localStorage?.getItem(storageKey) === 'true';
+
+    try {
+        const counter = new Counter({ workspace: 'gemariaica' });
+        const result = alreadyCounted
+            ? await counter.get(counterName)
+            : await counter.up(counterName);
+
+        visitCount.textContent = Number(result.value).toLocaleString('ro-RO');
+        if (!alreadyCounted) window.localStorage?.setItem(storageKey, 'true');
+    } catch (error) {
+        visitCount.textContent = '—';
+        console.warn('Contorul zilnic nu a putut fi încărcat.', error);
+    }
+};
+
+updateDailyVisitCount();

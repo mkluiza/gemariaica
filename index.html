@@ -24,7 +24,19 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .footer-counter strong {
+            color: var(--butter);
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .footer-counter {
+                order: 3;
+            }
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -224,7 +236,9 @@
                     href="#ingrediente">Ingrediente</a><a href="#contact">Contact</a></div>
             <div class="footer-social"><a href="#contact">Instagram</a><a href="#contact">Facebook</a></div>
         </div>
-        <div class="container footer-bottom"><span>© 2026 Gemăria Ica</span><span>Făcut cu drag, în România</span></div>
+        <div class="container footer-bottom"><span>© 2026 Gemăria Ica</span><span class="footer-counter"
+                aria-live="polite">Vizite azi: <strong data-visit-count>—</strong></span><span>Făcut cu drag, în
+                România</span></div>
     </footer>
 </body>
 
