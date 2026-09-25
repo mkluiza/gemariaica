@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gemăria Ica — gemuri artizanale făcute cu fructe alese, răbdare și mult drag." />
+    <meta name="theme-color" content="#314b38" />
+    <title>Gemăria Ica — Gustul de acasă</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .product-grid.single-product {
+            grid-template-columns: minmax(0, 380px);
+        }
+
+        @media (max-width: 700px) {
+            .product-grid.single-product {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conținut">Salt la conținut</a>
+
+    <header class="site-header" data-header>
+        <div class="container nav-wrap">
+            <a class="brand" href="#acasă" aria-label="Gemăria Ica — acasă">
+                <span class="brand-mark" aria-hidden="true"><span></span></span>
+                <span>Gemăria <em>Ica</em></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+                <span class="sr-only">Deschide meniul</span>
+                <span></span><span></span>
+            </button>
+            <nav id="main-navigation" class="main-nav" aria-label="Navigație principală">
+                <a href="#acasă">Acasă</a>
+                <a href="#poveste">Povestea noastră</a>
+                <a href="#gemuri">Gemuri</a>
+                <a href="#ingrediente">Ingrediente</a>
+                <a href="#contact">Contact</a>
+                <a class="button button-small" href="#gemuri">Descoperă gemurile</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conținut">
+        <section class="hero section" id="acasă">
+            <div class="hero-text container reveal">
+                <p class="eyebrow"><span></span> Din livadă, cu drag</p>
+                <h1>Gustul de acasă,<br /><i>pus în borcan.</i></h1>
+                <p class="hero-lead">Gemuri artizanale făcute cu fructe alese, răbdare și mult drag.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#gemuri">Descoperă gemurile <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#poveste">Povestea noastră <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note"><span class="note-line"></span> Loturi mici, povești mari</div>
+            </div>
+            <div class="hero-art reveal reveal-delay" aria-label="Compoziție cu borcan, pere și frunze">
+                <div class="sun-disc"></div>
+                <div class="leaf leaf-one" aria-hidden="true"></div>
+                <div class="leaf leaf-two" aria-hidden="true"></div>
+                <div class="pear pear-one" aria-hidden="true"><span></span></div>
+                <div class="pear pear-two" aria-hidden="true"><span></span></div>
+                <div class="jar-shadow"></div>
+                <div class="jar" aria-hidden="true">
+                    <div class="jar-lid"></div>
+                    <div class="jar-label"><small>gem artizanal</small><strong>Gemăria<br /><i>Ica</i></strong><span>din
+                            fructe alese</span></div>
+                </div>
+                <div class="hero-photo-frame">
+                    <img src="images/lastone-gemariaica Image Sep 24, 2026, 11_05_16 PM.png"
+                        alt="Imaginea de brand Gemăria Ica, în tonuri de verde și galben pal" fetchpriority="high" />
+                </div>
+                <p class="art-caption">Rețete de familie<br /><em>și parfum de livadă</em></p>
+            </div>
+        </section>
+
+        <section class="intro section" id="poveste">
+            <div class="container intro-grid">
+                <div class="section-kicker reveal"><span>01</span><i></i><span>Povestea noastră</span></div>
+                <div class="intro-copy reveal">
+                    <p class="eyebrow">Câte puțin din fiecare anotimp</p>
+                    <h2>Din livadă,<br /><i>cu drag.</i></h2>
+                    <p>Gemăria Ica a crescut dintr-o bucurie simplă: aceea de a păstra gustul fructelor bune cât mai
+                        aproape de casă.</p>
+                    <p>Ne plac rețetele care au timp, borcanele umplute cu grijă și diminețile în care o felie de pâine
+                        caldă devine un mic răsfăț. Punem în fiecare lot răbdare, atenție și bucuria lucrului făcut cu
+                        mâinile.</p>
+                    <a class="arrow-link" href="#ingrediente">Descoperă felul nostru de a face <span
+                            aria-hidden="true">↗</span></a>
+                </div>
+                <div class="story-visual reveal reveal-delay">
+                    <div class="story-card story-card-back"></div>
+                    <div class="story-card story-card-front">
+                        <span class="stamp">făcut<br />cu drag</span>
+                        <div class="story-pear pear-three"><span></span></div>
+                        <div class="story-leaf"></div>
+                        <span class="story-label">din livadă<br /><i>în borcan</i></span>
+                    </div>
+                    <p class="vertical-note">O poveste românească, spusă încet</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products section" id="gemuri">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Primul nostru gust</p>
+                        <h2>Gemul de<br /><i>pere.</i></h2>
+                    </div>
+                    <p class="heading-note">Fiecare borcan păstrează ceva din fructul din care s-a născut — culoare,
+                        parfum și un strop de răgaz.</p>
+                </div>
+                <div class="product-grid single-product">
+                    <article class="product-card product-pear reveal">
+                        <div class="product-art"><span class="product-pear-shape"></span><span
+                                class="product-leaf"></span><span class="product-number">01</span></div>
+                        <div class="product-info">
+                            <h3>Gem de pere</h3>
+                            <p>Catifelat, luminos și cu parfum de livadă.</p><a href="#contact">Vezi detalii <span
+                                    aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="principles section" id="ingrediente">
+            <div class="container">
+                <div class="principles-heading reveal">
+                    <p class="eyebrow">Felul nostru de a face</p>
+                    <h2>Puține ingrediente.<br /><i>Mult gust.</i></h2>
+                </div>
+                <div class="principles-grid">
+                    <article class="principle reveal"><span class="principle-icon pear-icon"></span><span
+                            class="principle-no">01</span>
+                        <h3>Fructe alese</h3>
+                        <p>Fructe atent selecționate.</p>
+                    </article>
+                    <article class="principle reveal reveal-delay"><span class="principle-icon pot-icon"></span><span
+                            class="principle-no">02</span>
+                        <h3>Făcut artizanal</h3>
+                        <p>Pregătit în loturi mici, cu atenție.</p>
+                    </article>
+                    <article class="principle reveal"><span class="principle-icon leaf-icon"></span><span
+                            class="principle-no">03</span>
+                        <h3>Rețete cu suflet</h3>
+                        <p>Inspirate din gustul de acasă.</p>
+                    </article>
+                    <article class="principle reveal reveal-delay"><span class="principle-icon sun-icon"></span><span
+                            class="principle-no">04</span>
+                        <h3>Simplu și natural</h3>
+                        <p>Fără aspect industrial.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pear-section section">
+            <div class="container pear-section-inner">
+                <div class="pear-copy reveal"><span class="large-number">02</span>
+                    <p class="eyebrow">Semnul nostru</p>
+                    <h2>Totul începe<br />cu o <i>pară bună.</i></h2>
+                    <p>Verde crud, galben pal și o dulceață care se așază încet. Para ne amintește să alegem lucrurile
+                        simple și să le facem bine.</p><a class="button button-light" href="#gemuri">Descoperă colecția
+                        <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="pear-botanical reveal reveal-delay" aria-hidden="true">
+                    <div class="botanical-stem"></div>
+                    <div class="botanical-leaf"></div>
+                    <div class="botanical-pear"></div>
+                    <div class="botanical-pear small"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section section">
+            <div class="container cta-inner reveal">
+                <p class="eyebrow">Un borcan, o stare de bine</p>
+                <h2>Deschide un borcan<br /><i>de bunătate.</i></h2>
+                <p>Descoperă gusturile Gemăriei Ica și adu puțin din farmecul unei livezi direct la masa ta.</p><a
+                    class="button button-light" href="#gemuri">Descoperă colecția <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Ne-ar face plăcere</p>
+                    <h2>Hai să<br /><i>vorbim.</i></h2>
+                    <p>Ai o întrebare, o idee sau vrei să ne saluți? Scrie-ne. Răspundem cu drag.</p>
+                    <div class="contact-details"><a href="mailto:[emailul tău]">Email <span>[emailul tău]</span></a><a
+                            href="tel:[numărul tău]">Telefon <span>[numărul tău]</span></a><span>Social <span>Instagram
+                                · Facebook</span></span></div>
+                </div>
+                <form class="contact-form reveal reveal-delay" action="#contact" method="post"><label
+                        for="name">Nume<input id="name" name="name" type="text" autocomplete="name"
+                            placeholder="Cum te cheamă?" required /></label><label for="email">Email<input id="email"
+                            name="email" type="email" autocomplete="email" placeholder="Unde îți putem răspunde?"
+                            required /></label><label for="message">Mesaj<textarea id="message" name="message" rows="4"
+                            placeholder="Scrie-ne câteva rânduri..." required></textarea></label><button class="button"
+                        type="submit">Trimite mesajul <span aria-hidden="true">↗</span></button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid"><a class="brand brand-footer" href="#acasă"><span class="brand-mark"
+                    aria-hidden="true"><span></span></span><span>Gemăria <em>Ica</em></span></a>
+            <p class="footer-slogan">Gustul de acasă,<br /><i>pus în borcan.</i></p>
+            <div class="footer-links"><a href="#poveste">Povestea noastră</a><a href="#gemuri">Gemuri</a><a
+                    href="#ingrediente">Ingrediente</a><a href="#contact">Contact</a></div>
+            <div class="footer-social"><a href="#contact">Instagram</a><a href="#contact">Facebook</a></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 Gemăria Ica</span><span>Făcut cu drag, în România</span></div>
+    </footer>
+</body>
+
+</html>
