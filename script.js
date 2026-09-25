@@ -36,12 +36,37 @@ if ('IntersectionObserver' in window) {
     revealItems.forEach((item) => item.classList.add('visible'));
 }
 
-document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const status = event.currentTarget.querySelector('.form-status');
-    status.textContent = 'Mulțumim — mesajul tău este pregătit pentru noi.';
-    event.currentTarget.reset();
-});
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    if (typeof emailjs !== 'undefined') emailjs.init({ publicKey: '-RxwZb0vBaP6znrIx' });
+
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const status = form.querySelector('.form-status');
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        if (typeof emailjs === 'undefined') {
+            status.textContent = 'Serviciul de contact nu este disponibil momentan.';
+            return;
+        }
+
+        submitButton.disabled = true;
+        status.textContent = 'Se trimite mesajul...';
+
+        try {
+            await emailjs.sendForm('service_j3pz6vr', 'template_3an3ftm', form);
+            status.textContent = 'Mulțumim! Mesajul tău a fost trimis.';
+            form.reset();
+        } catch (error) {
+            status.textContent = 'Mesajul nu a putut fi trimis. Te rugăm să încerci din nou.';
+            console.error('EmailJS error:', error);
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+}
 
 const visitCount = document.querySelector('[data-visit-count]');
 
