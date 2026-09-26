@@ -30,6 +30,10 @@
             font-weight: 600;
         }
 
+        .footer-grid {
+            grid-template-columns: 1.2fr 1fr 1fr;
+        }
+
         @media (max-width: 700px) {
             .footer-counter {
                 order: 3;
@@ -37,7 +41,6 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -59,7 +62,6 @@
                 <a href="#poveste">Povestea noastră</a>
                 <a href="#gemuri">Gemuri</a>
                 <a href="#ingrediente">Ingrediente</a>
-                <a href="#contact">Contact</a>
                 <a class="button button-small" href="#gemuri">Descoperă gemurile</a>
             </nav>
         </div>
@@ -140,7 +142,7 @@
                                 class="product-leaf"></span><span class="product-number">01</span></div>
                         <div class="product-info">
                             <h3>Gem de pere</h3>
-                            <p>Catifelat, luminos și cu parfum de livadă.</p><a href="#contact">Vezi detalii <span
+                            <p>Catifelat, luminos și cu parfum de livadă.</p><a href="#poveste">Povestea noastră <span
                                     aria-hidden="true">↗</span></a>
                         </div>
                     </article>
@@ -206,27 +208,6 @@
             </div>
         </section>
 
-        <section class="contact section" id="contact">
-            <div class="container contact-grid">
-                <div class="contact-copy reveal">
-                    <p class="eyebrow">Ne-ar face plăcere</p>
-                    <h2>Hai să<br /><i>vorbim.</i></h2>
-                    <p>Ai o întrebare, o idee sau vrei să ne saluți? Scrie-ne. Răspundem cu drag.</p>
-                    <div class="contact-details"><a href="mailto:[emailul tău]">Email <span>[emailul tău]</span></a><a
-                            href="tel:[numărul tău]">Telefon <span>[numărul tău]</span></a><span>Social <span>Instagram
-                                · Facebook</span></span></div>
-                </div>
-                <form class="contact-form reveal reveal-delay" action="#contact" method="post"><label
-                        for="name">Nume<input id="name" name="name" type="text" autocomplete="name"
-                            placeholder="Cum te cheamă?" required /></label><label for="email">Email<input id="email"
-                            name="email" type="email" autocomplete="email" placeholder="Unde îți putem răspunde?"
-                            required /></label><label for="message">Mesaj<textarea id="message" name="message" rows="4"
-                            placeholder="Scrie-ne câteva rânduri..." required></textarea></label><button class="button"
-                        type="submit">Trimite mesajul <span aria-hidden="true">↗</span></button>
-                    <p class="form-status" role="status" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
@@ -234,8 +215,7 @@
                     aria-hidden="true"><span></span></span><span>Gemăria <em>Ica</em></span></a>
             <p class="footer-slogan">Gustul de acasă,<br /><i>pus în borcan.</i></p>
             <div class="footer-links"><a href="#poveste">Povestea noastră</a><a href="#gemuri">Gemuri</a><a
-                    href="#ingrediente">Ingrediente</a><a href="#contact">Contact</a></div>
-            <div class="footer-social"><a href="#contact">Instagram</a><a href="#contact">Facebook</a></div>
+                    href="#ingrediente">Ingrediente</a></div>
         </div>
         <div class="container footer-bottom"><span>© 2026 Gemăria Ica</span><span class="footer-counter"
                 aria-live="polite">Vizite azi: <strong data-visit-count>—</strong></span><span>Făcut cu drag, în
