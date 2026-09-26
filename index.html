@@ -19,9 +19,17 @@
             grid-template-columns: minmax(0, 380px);
         }
 
+        .product-grid.two-products .product-card {
+            grid-column: span 3;
+        }
+
         @media (max-width: 700px) {
             .product-grid.single-product {
                 grid-template-columns: 1fr;
+            }
+
+            .product-grid.two-products .product-card {
+                grid-column: span 1;
             }
         }
 
@@ -130,19 +138,27 @@
             <div class="container">
                 <div class="section-heading reveal">
                     <div>
-                        <p class="eyebrow">Primul nostru gust</p>
-                        <h2>Gemul de<br /><i>pere.</i></h2>
+                        <p class="eyebrow">Alege-ți preferatul</p>
+                        <h2>Bunătățile<br /><i>Gemăriei</i></h2>
                     </div>
                     <p class="heading-note">Fiecare borcan păstrează ceva din fructul din care s-a născut — culoare,
                         parfum și un strop de răgaz.</p>
                 </div>
-                <div class="product-grid single-product">
+                <div class="product-grid two-products">
                     <article class="product-card product-pear reveal">
                         <div class="product-art"><span class="product-pear-shape"></span><span
                                 class="product-leaf"></span><span class="product-number">01</span></div>
                         <div class="product-info">
                             <h3>Gem de pere</h3>
-                            <p>Catifelat, luminos și cu parfum de livadă.</p><a href="#poveste">Povestea noastră <span
+                            <p>Catifelat, luminos și cu parfum de livadă.</p><a href="#ingrediente">Despre gemuri <span
+                                    aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="product-card product-plum reveal reveal-delay">
+                        <div class="product-art"><span class="plum-shape"></span><span class="product-number">02</span></div>
+                        <div class="product-info">
+                            <h3>Gem de prune</h3>
+                            <p>Un nou sortiment în colecția Gemăriei.</p><a href="#ingrediente">Despre gemuri <span
                                     aria-hidden="true">↗</span></a>
                         </div>
                     </article>
